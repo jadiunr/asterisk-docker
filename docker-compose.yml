@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  asterisk:
+    build: .
+    volumes:
+      - ./etc/asterisk:/etc/asterisk
+    ports:
+      - "5060:5060"
+    stdin_open: true
+    tty: true
